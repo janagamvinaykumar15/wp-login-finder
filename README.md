@@ -1,6 +1,6 @@
 # WordPress Login Page Finder
 
-A Python tool to discover WordPress login pages for a given domain. It checks common WordPress login paths, tracks redirects, fingerprints login content, and can output structured JSON reports.
+A Python tool to discover WordPress login pages for a given domain. It checks common WordPress login paths, tracks redirects, fingerprints login content, extracts WordPress versions, and can output structured JSON reports.
 
 This project is intended for **authorized security testing and educational purposes only**.
 
@@ -38,20 +38,47 @@ This tool is provided for educational and authorized security auditing purposes 
 
 ## Requirements
 
-- Python 3.8+
+- Python 3.8 or higher
 - `requests`
 - `urllib3`
 
-Install dependencies with pip:
+## Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/janagamvinaykumar15/wp-login-finder.git
+cd wp-login-finder
+```
+
+> No Git? Click the green **Code** button on GitHub → **Download ZIP** and extract it.
+
+### 2. Verify Python version
+
+```bash
+python --version
+```
+
+Python **3.8 or higher** is required.
+
+### 3. Install dependencies
+
+This tool uses only two external libraries (`requests` and `urllib3`):
 
 ```bash
 pip install requests urllib3
 ```
 
-## Installation
+> On macOS/Linux you may need `pip3` instead of `pip`.  
+> On Windows, use `py -m pip install requests urllib3` if `pip` isn't on PATH.
 
-1. Download or clone this repository.
-2. Install the dependencies shown above.
+### 4. Confirm the script runs
+
+```bash
+python wpLoginFinder.py --help
+```
+
+If you see the help menu, installation succeeded.
 
 ## Usage Examples
 
